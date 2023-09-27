@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
 USER appuser
 WORKDIR /home/appuser
 
-RUN git clone https://github.com/mchadd3r-pan/code2cloud-demo app
+RUN git clone https://github.com/mchadd3r-pan/code2cloud-demo.git app
 
 ENV VIRTUAL_ENV=/home/appuser/venv
 RUN virtualenv ${VIRTUAL_ENV}
