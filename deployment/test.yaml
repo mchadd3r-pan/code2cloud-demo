@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-eks-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: code2cloud
+        image: 379042226601.dkr.ecr.us-east-1.amazonaws.com/code2cloud:60ce1a66a63462d59be7322687551f9a1984edb9
